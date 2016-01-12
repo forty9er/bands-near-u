@@ -23,16 +23,16 @@ We proceeded to build this app using the Agile methodologies we practise at Make
 As the application is location-based it was important to implement a responsively-designed UI. For this we used Bootstrap, re-organising the elements for smaller screens and hiding the brand name to make more room for the search bar (the brand logo remains in either case).
 
 
-## Project Working Document and User Stories
+### Project Working Document and User Stories
 https://docs.google.com/document/d/16NNmJa4yp-4q5cYy07H9eRYgip4YFweZ9PlP4LGgvjY
 
-## First week Retrospective
+### First week Retrospective
 https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 
 
-### Installation
+## Installation
 
-## Deployment locally
+### Deployment locally
 
 ``` bin/rake db:create ```
 * Install Node/NPM
@@ -42,13 +42,13 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * `` npm start ```
 * navigate to http://localhost:5000
 
-## Deploying to Heroku (assuming you have a Heroku account and Heroku Toolbelt installed):
+### Deploying to Heroku (assuming you have a Heroku account and Heroku Toolbelt installed):
 * ``` heroku create <your app name> ```
 * ``` git push heroku master ```
 * ``` heroku open ```
 
 
-### TODO
+## TODO
 
 * Full code review
 * Remove comments
@@ -58,7 +58,7 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * Comprehensive testing
 
 
-### Technologies used
+## Technologies used
 
 * JavaScript
 * jQuery
@@ -73,7 +73,7 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * Songkick API
 
 
-### Screenshots
+## Screenshots
 
 ![Screenshot1](docs/screenshots/screenshot1.png)
 
@@ -94,7 +94,7 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 ![Screenhot8](docs/screenshots/screenshot9.png)
 
 
-### The Team
+## The Team
 Tom Barnes (Brighton, UK)
 Andy Dowell (Manchester, UK)
 Pablo Dominguez (Cádiz, Spain)
