@@ -22,16 +22,16 @@ We proceeded to build this app using the Agile methodologies we practise at Make
 
 As the application is location-based it was important to implement a responsively-designed UI. For this we used Bootstrap, re-organising the elements for smaller screens and hiding the brand name to make more room for the search bar (the brand logo remains in either case).
 
-### Project Working Document and User Stories
+#### Project Working Document and User Stories
 https://docs.google.com/document/d/16NNmJa4yp-4q5cYy07H9eRYgip4YFweZ9PlP4LGgvjY
 
-### First week Retrospective
+#### First week Retrospective
 https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 
 
 ## Installation
 
-### Deployment locally
+#### Deployment locally
 
 * Install Node.js/NPM
 * Clone this project
@@ -40,7 +40,7 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * ``` npm start ```
 * navigate to http://localhost:5000
 
-### Deploying to Heroku 
+#### Deploying to Heroku 
 
 assuming you have a Heroku account and Heroku Toolbelt installed:
 * ``` heroku create <your app name> ```
