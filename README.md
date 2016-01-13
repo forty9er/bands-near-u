@@ -1,4 +1,4 @@
-![BandsNearU](docs/screenshots/logo.png)
+![BandsNearU](docs/screenshots/logo-small.png)
 ## A Music/Location Discovery Application
 
 ![Screenshot10](docs/screenshots/screenshot10.png)
@@ -34,12 +34,11 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 
 ### Deployment locally
 
-``` bin/rake db:create ```
-* Install Node/NPM
+* Install Node.js/NPM
 * Clone this project
 * ``` npm install ``` from within the project directory, then:
 * ``` bower install ```
-* `` npm start ```
+* ``` npm start ```
 * navigate to http://localhost:5000
 
 ### Deploying to Heroku (assuming you have a Heroku account and Heroku Toolbelt installed):
@@ -56,6 +55,10 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * Look at restructuring JS Promises
 * Remove unused dependencies
 * Comprehensive testing
+* Improve search algorithm
+* Improve compatibility between API's (ie. using different country codes)
+* Better styling of modals
+* Uniform styling of 'see more' links
 
 
 ## Technologies used
@@ -95,7 +98,7 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 
 
 ## The Team
-Tom Barnes (Brighton, UK)
-Andy Dowell (Manchester, UK)
-Pablo Dominguez (Cádiz, Spain)
-Rob Youngman (Bristol, UK)
+[Tom Barnes](https://github.com/forty9er) (Brighton, UK)
+[Pablo Dominguez](https://github.com/blancopado) (Cádiz, Spain)
+[Andy Dowell](https://github.com/k0zakinio) (Manchester, UK)
+[Rob Youngman](https://github.com/youngmanr) (Bristol, UK)
