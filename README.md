@@ -3,13 +3,13 @@
 
 ![Screenshot10](docs/screenshots/screenshot10.png)
 
-This web app was written by a team of 4 Makers Academy students for our final project.
+This web app was written by a team of four Makers Academy students for our final project.
 The app is designed to help the user discover music from artists based in their current location or any location of their choice, and to find music performed in that location.
 Alternatively, it could be used to understand a bit more about a location via the music that is produced or performed there. 
 The local artists found can be filtered by their worldwide popularity. 
 
 
-## Live demo
+##Live demo
 https://bands-near-u.herokuapp.com
 
 
@@ -22,16 +22,16 @@ We proceeded to build this app using the Agile methodologies we practise at Make
 
 As the application is location-based it was important to implement a responsively-designed UI. For this we used Bootstrap, re-organising the elements for smaller screens and hiding the brand name to make more room for the search bar (the brand logo remains in either case).
 
-#### Project Working Document and User Stories
+##### Project Working Document and User Stories
 https://docs.google.com/document/d/16NNmJa4yp-4q5cYy07H9eRYgip4YFweZ9PlP4LGgvjY
 
-#### First week Retrospective
+##### First week Retrospective
 https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 
 
 ## Installation
 
-#### Deployment locally
+##### Deployment locally
 
 * Install Node.js/NPM
 * Clone this project
@@ -40,7 +40,7 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * ``` npm start ```
 * navigate to http://localhost:5000
 
-#### Deploying to Heroku 
+##### Deploying to Heroku 
 
 assuming you have a Heroku account and Heroku Toolbelt installed:
 * ``` heroku create <your app name> ```
