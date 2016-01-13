@@ -1,5 +1,5 @@
 ![BandsNearU](docs/screenshots/logo-small.png)
-## A Music/Location Discovery Application
+# A Music/Location Discovery Application
 
 ![Screenshot10](docs/screenshots/screenshot10.png)
 
@@ -9,19 +9,18 @@ Alternatively, it could be used to understand a bit more about a location via th
 The local artists found can be filtered by their worldwide popularity. 
 
 
-### Live demo
+## Live demo
 https://bands-near-u.herokuapp.com
 
 
-### Duration
+## Duration
 9 days
 
 
-### Approach
+## Approach
 We proceeded to build this app using the Agile methodologies we practise at Makers Academy. Twice (or three times) daily stand-ups, twice weekly retros and pair programming, rotating pairs twice a day. This way each one of us had some input in every facet of the app and we had a good understanding of what we were each doing at any given time.
 
 As the application is location-based it was important to implement a responsively-designed UI. For this we used Bootstrap, re-organising the elements for smaller screens and hiding the brand name to make more room for the search bar (the brand logo remains in either case).
-
 
 ### Project Working Document and User Stories
 https://docs.google.com/document/d/16NNmJa4yp-4q5cYy07H9eRYgip4YFweZ9PlP4LGgvjY
@@ -41,7 +40,9 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 * ``` npm start ```
 * navigate to http://localhost:5000
 
-### Deploying to Heroku (assuming you have a Heroku account and Heroku Toolbelt installed):
+### Deploying to Heroku 
+
+assuming you have a Heroku account and Heroku Toolbelt installed:
 * ``` heroku create <your app name> ```
 * ``` git push heroku master ```
 * ``` heroku open ```
@@ -99,6 +100,9 @@ https://docs.google.com/document/d/1PymRPDJkgK5D5HhTtilmV6tAKLntoazEezHT0CInLKI
 
 ## The Team
 [Tom Barnes](https://github.com/forty9er) (Brighton, UK)
+
 [Pablo Dominguez](https://github.com/blancopado) (Cádiz, Spain)
+
 [Andy Dowell](https://github.com/k0zakinio) (Manchester, UK)
+
 [Rob Youngman](https://github.com/youngmanr) (Bristol, UK)
