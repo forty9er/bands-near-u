@@ -3,7 +3,7 @@
 
 ![Screenshot10](docs/screenshots/screenshot10.png)
 
-This web app was written by a team of four Makers Academy students for our final project.
+This web app was written by an international team of four Makers Academy students for our final project.
 The app is designed to help the user discover music from artists based in their current location or any location of their choice, and to find music performed in that location.
 Alternatively, it could be used to understand a bit more about a location via the music that is produced or performed there. 
 The local artists found can be filtered by their worldwide popularity. 
