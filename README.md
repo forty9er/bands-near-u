@@ -20,6 +20,8 @@ https://bands-near-u.herokuapp.com
 ## Approach
 We proceeded to build this app using the Agile methodologies we practise at Makers Academy. Twice (or three times) daily stand-ups, twice weekly retros and pair programming, rotating pairs twice a day. This way each one of us had some input in every facet of the app and we had a good understanding of what we were each doing at any given time.
 
+Unfortunately due to the short time scale, our desire to produce a polished final presentation, and our lack of experience with JavaScript testing we did not practise a great deal of TDD. There are some Protractor tests in there (we had originally intended to use Angular.js), but test coverage is admittedly poor. Writing further tests here and better aquainting myself with JavaScript testing is high up the agenda for me right now.
+
 As the application is location-based it was important to implement a responsively-designed UI. For this we used Bootstrap, re-organising the elements for smaller screens and hiding the brand name to make more room for the search bar (the brand logo remains in either case).
 
 ##### Project Working Document and User Stories
