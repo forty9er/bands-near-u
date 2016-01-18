@@ -92,15 +92,3 @@ function updateAllNewsModal(news) {
     $('#news_full').append("<a class=\"list-group-item\" href="+"\""+news[i].url+"\""+"onClick=\"return popup(this, 'popup')\">"+news[i].name+"</a></li>");
   };
 };
-
-
-
-
-
-
-
-
-
-
-
-
