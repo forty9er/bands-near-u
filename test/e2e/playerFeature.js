@@ -1,19 +1,7 @@
-describe('OST Player', function() {
+describe('Bands-Near-U player', function() {
 
   beforeEach(function() {
       browser.get('http://localhost:8080');
-      // browser.executeScript('\
-      //   window.navigator.geolocation.getCurrentPosition = \
-      //       function(success){ \
-      //           var position = { \
-      //               "coords" : { \
-      //                   "latitude": "51.4995928",
-      //                   "longitude": "-0.1722515" \
-      //               } \
-      //           }; \
-      //           success(position); \
-      //       }');
-
       browser.sleep(7000);
   });
 
