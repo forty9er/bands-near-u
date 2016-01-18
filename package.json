@@ -1,23 +1,23 @@
 {
-  "name": "original_sound_track",
+  "name": "BandsNearU",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ost.js",
+    "start": "node bandsnearu.js",
     "postinstall": "bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/youngmanr/original_sound_track.git"
+    "url": "git+https://github.com/forty9er/bands-near-u"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/youngmanr/original_sound_track/issues"
+    "url": "https://github.com/forty9er/bands-near-u/issues"
   },
-  "homepage": "https://github.com/youngmanr/original_sound_track#readme",
+  "homepage": "https://github.com/forty9er/bands-near-u#readme",
   "devDependencies": {
     "bower": "^1.7.1",
     "jasmine-core": "^2.4.1",

@@ -1,12 +1,15 @@
 {
-  "name": "original_sound_track",
+  "name": "bands-near-u",
   "description": "",
   "main": "index.js",
   "authors": [
+    "Tom Barnes <ruralmyth@gmail.com",
+    "Andy Dowell <adowellphoto@gmail.com>",
+    "Pablo Dominguez <pablo.dominguezblanco@gmail.com>",
     "Robert Youngman <rob_youngman@yahoo.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/youngmanr/original_sound_track",
+  "homepage": "https://github.com/forty9er/bands-near-u",
   "moduleType": [],
   "ignore": [
     "**/.*",
