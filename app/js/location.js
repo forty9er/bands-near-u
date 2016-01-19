@@ -2,7 +2,7 @@
 
 var positionData = {};
 
-function getLocation() { // Nb. Error handling has been removed
+function getLocation() {
   return new Promise(function(resolve, reject) {
     navigator.geolocation.getCurrentPosition(function(position) {
       positionData.latitude = position.coords.latitude;
@@ -18,7 +18,6 @@ function searchLocation() {
     var searchTerms = $('#searchVal').val();
     geocoder.geocode( { 'address': searchTerms}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-          console.log('searchLocation Result---------' ,results);
           positionData.latitude = results[0].geometry.location.lat();
           positionData.longitude = results[0].geometry.location.lng();
           resolve(positionData);
@@ -61,7 +60,6 @@ function showPosition() {
         country = convToParam(results[results.length-1].address_components[0].long_name);
       }
       countryCode = results[results.length-1].address_components[0].short_name;
-
       positionData.cityName = cityName;
       positionData.country = country;
       positionData.countryCode = countryCode;
@@ -72,7 +70,6 @@ function showPosition() {
   });
 }
 
-// CONVERTS MULTI WORD STRINGS INTO PARAMS e.g. 'Brighton and Hove' => 'Brighton+and+Hove'
 function convToParam(words) {
   var result = words.split(' ');
   result = result.join('+');
