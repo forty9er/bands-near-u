@@ -2,7 +2,6 @@
 
 var artistInfoDisplayed = false;
 
-// MAKES ECHONEST API CALL BASED ON cityName AND country
 function getArtists(positionData, familiarity) {
   return new Promise(function(resolve, reject) {
     var familiarityTerm = familiarity || '0.5';
@@ -17,7 +16,6 @@ function getArtists(positionData, familiarity) {
                   '&bucket=biographies' +
                   '&bucket=artist_location' +
                   '&bucket=news';
-    console.log('echonestURL ', echonestUrl);
     $.get(echonestUrl, function(data){
       resolve(data);
     });
@@ -53,13 +51,10 @@ function spotifyArtistId(artist) {
 }
 
 function updateCurrentArtistFromPlaylist() {
-  console.log('myPlaylist - see below');
-  console.log(myPlaylist.playlist[0]);
   var artist = myPlaylist.playlist[0].artist;
   var title = myPlaylist.playlist[0].title;
   var poster = myPlaylist.playlist[0].poster;
   var bio = myPlaylist.playlist[0].bio;
   var news = myPlaylist.playlist[0].news;
-  console.log(news);
   displayCurrentArtist(document, artist, title, poster, bio, news);
 }

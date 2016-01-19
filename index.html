@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -18,45 +17,41 @@
 </header>
 <body>
 <div class="spinner"></div>
-<!-- <div class= "container"> -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="hidden-xs col-sm-4 col-lg-4">
-          <img id="AppLogo" class="navbar-brand" src="app/css/image/logo-tiny.png" href="#" data-toggle="modal" data-target="#AppModal"></img>
-          <a id="AppName" class="navbar-brand" href="#" data-toggle="modal" data-target="#AppModal">Bands Near U</a>
-        </div>
-        <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
-          <img id="AppLogo" class="navbar-brand" src="app/css/image/logo-tiny.png" href="#" data-toggle="modal" data-target="#AppModal">
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-4">
-          <form id='searchBar' class="form-inline">
-            <input type="text" class='form-control' placeholder="Search places..." id='searchVal'></input>
-          </form>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-lg-4">
-          <div id="dropdown" class="dropdown pull-right">
-              <button class="btn btn-default dropdown-toggle" type="button" id="popDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Popularity
-                <span class="caret"></span>
-              </button>
-            <ul class="dropdown-menu">
-              <li><a href="#" id="familiarityHigh" name="optFamiliarity">High</a></li>
-              <li><a href="#" id="familiarityMedium" name="optFamiliarity">Medium</a></li>
-              <li><a href="#" id="familiarityLow" name="optFamiliarity">Low</a></li>
-            </ul>
-          </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="hidden-xs col-sm-4 col-lg-4">
+        <img id="AppLogo" class="navbar-brand" src="app/css/image/logo-tiny.png" href="#" data-toggle="modal" data-target="#AppModal"></img>
+        <a id="AppName" class="navbar-brand" href="#" data-toggle="modal" data-target="#AppModal">Bands Near U</a>
+      </div>
+      <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
+        <img id="AppLogo" class="navbar-brand" src="app/css/image/logo-tiny.png" href="#" data-toggle="modal" data-target="#AppModal">
+      </div>
+      <div class="col-xs-6 col-sm-4 col-lg-4">
+        <form id='searchBar' class="form-inline">
+          <input type="text" class='form-control' placeholder="Search places..." id='searchVal'></input>
+        </form>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-lg-4">
+        <div id="dropdown" class="dropdown pull-right">
+            <button class="btn btn-default dropdown-toggle" type="button" id="popDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Popularity
+              <span class="caret"></span>
+            </button>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="familiarityHigh" name="optFamiliarity">High</a></li>
+            <li><a href="#" id="familiarityMedium" name="optFamiliarity">Medium</a></li>
+            <li><a href="#" id="familiarityLow" name="optFamiliarity">Low</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
 <div id="location" class="container-fluid">
   <h1 id="currentLocation"></h1>
 </div>
-
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-
 <div class="container-fluid full-width has-inner">
   <div class="row row-no-gutter">
   <div class="col-xs-12 nopadding">
@@ -65,7 +60,6 @@
   <div id="playingArtistPoster">
   <div class="col-md-4">
   <div class="inner">
-  <!-- <img id="currentPoster" class="img-rounded" alt="Artist image" width="350" height="350"> -->
   <img id="currentPoster" class="img-responsive" alt="Album art">
   </div>
   </div>
@@ -89,8 +83,6 @@
   </div>
   </div>
 </div>
-
-<!-- Artist Biography Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-sm modal-lg">
     <div class="modal-content">
@@ -105,8 +97,6 @@
     </div>
   </div>
 </div>
-
-<!-- About App Modal -->
 <div class="modal fade" id="AppModal" tabindex="-1" role="dialog" aria-labelledby="AppModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -146,8 +136,6 @@
     </div>
   </div>
 </div>
-
-<!-- News Modal -->
 <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="NewsModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -162,7 +150,6 @@
     </div>
   </div>
 </div>
-
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="row">
@@ -182,8 +169,6 @@
     </div>
   </div>
 </nav>
-
-<!-- </div> -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/add-on/jplayer.playlist.js"></script>

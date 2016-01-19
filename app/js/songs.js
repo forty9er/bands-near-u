@@ -1,9 +1,5 @@
 'use strict';
 
-// MAKES SPOTIFY API CALL BASED ON THE ARTIST ID AND SETS PROPERTY topTracks AND A randomTrack
-// THIS SHOULD BE REFRACTORED INTO TWO METHODS: 1) getTopTracksForAllArtists 2) addTracksToPlaylist
-// IF POSSIBLE playIfNotPlaying SHOULD BE CALLED FROM OUTSIDE OF THIS FUNCTION
-// function getArtistTopTracks(artist) {
 function getArtistTopTracks(artistsObject, positionData) {
   return new Promise(function(resolve, reject) {
   artistsObject.response.artists.forEach(function(artist) {

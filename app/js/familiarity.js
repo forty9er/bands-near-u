@@ -1,11 +1,9 @@
 'use strict';
 
-// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
 $('.dropdown').on('show.bs.dropdown', function(e){
   $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
 });
 
-// ADD SLIDEUP ANIMATION TO DROPDOWN //
 $('.dropdown').on('hide.bs.dropdown', function(e){
   $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
 });
@@ -28,11 +26,7 @@ function updateFamiliarity(f) {
   myPlaylist.remove();
   artistInfoDisplayed = false;
   getArtists(positionData, f).then(function(artistsObjectPromise) {
-    console.log('Updated Familiarity Artists: (see object below)');
-    console.log(artistsObjectPromise);
     getArtistTopTracks(artistsObjectPromise, positionData).then(function(topTracksPromise) {
-      console.log('Update MyPlaylist (see below)');
-      console.log(myPlaylist);
       myPlaylist.play();
     });
   });
