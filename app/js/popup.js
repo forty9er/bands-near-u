@@ -1,13 +1,13 @@
 'use strict';
 
-var popup = function (mylink, title) {
+function popup(mylink, title) {
   var href;
   var width = 1000;
   var height = 500;
   var left = 200;
   var top = 100;
-  if (!window.focus) return true;
-  if (typeof(mylink)==='string') {
+  if (! window.focus) return true;
+  if (typeof(mylink) == 'string') {
     href=mylink;
   } else {
     href=mylink.href;
