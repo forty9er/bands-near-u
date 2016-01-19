@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
   var positionData = {};
-  var playing = false;
   var artistInfoDisplayed = false;
-  var modifiedCountries = ["United Kingdom"]
 
   $("#familiarityLow").click(function() {
     updateFamiliarity("0.1");
@@ -154,7 +152,6 @@ $(document).ready(function() {
             var news = artist.news;
 
             myPlaylist.add({ title: title, artist: artistName, mp3: mp3, poster: poster, bio: bio, news: news });
-            // playIfNotPlaying();
             displayArtistInfoIfNotAlreadyDisplayed(artistName, title, poster, bio, news);
           };
         });
@@ -176,14 +173,6 @@ $(document).ready(function() {
       return {text: "No biography available"}
     };
   };
-
-  // PLAY THE PLAYLIST IF IT'S NOT ALREADY PLAYING
-  function playIfNotPlaying(){
-    if (!playing) {
-      playing = true;
-      myPlaylist.play(0);
-    };
-  }
 
   function displayArtistInfoIfNotAlreadyDisplayed(artist, title, poster, bio, news){
     if (!artistInfoDisplayed) {
