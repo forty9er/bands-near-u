@@ -60,45 +60,43 @@ $(document).ready(function() {
 
   function showPosition() {
     return new Promise(function(resolve, reject) {
-
-        var latitude = positionData.latitude;
-        var longitude = positionData.longitude;
-        var geolocUrl = 'https://maps.googleapis.com/maps/api/geocode/json?&language=en&latlng=' + latitude + "," + longitude
-                         '&key=AIzaSyAGWnWE0GeEPpCYmiy2mXZ9RnDGf_n3JQA';
-
-        $.get(geolocUrl, function(response) {
-          var results = response.results
-          var country = results[results.length-1].address_components[0].long_name;
-          if (country === "United Kingdom") {
-            for (var result = 0; result < results.length; result++) {
-              for (var component = 0; component < results[result].address_components.length; component++) {
-                if(results[result].address_components[component].types.includes('postal_town')) {
-                  cityName = convToParam(results[result].address_components[component].long_name);
-                };
-                if (results[result].address_components[component].types.includes('administrative_area_level_1')) {
-                  country = convToParam(results[result].address_components[component].long_name);
-                };
+      var latitude = positionData.latitude;
+      var longitude = positionData.longitude;
+      var geolocUrl = 'https://maps.googleapis.com/maps/api/geocode/json?&language=en&latlng=' + latitude + "," + longitude
+                       '&key=AIzaSyAGWnWE0GeEPpCYmiy2mXZ9RnDGf_n3JQA';
+      $.get(geolocUrl, function(response) {
+        var results = response.results
+        var country = results[results.length-1].address_components[0].long_name;
+        if (country === "United Kingdom") {
+          for (var result = 0; result < results.length; result++) {
+            for (var component = 0; component < results[result].address_components.length; component++) {
+              if(results[result].address_components[component].types.includes('postal_town')) {
+                cityName = convToParam(results[result].address_components[component].long_name);
+              };
+              if (results[result].address_components[component].types.includes('administrative_area_level_1')) {
+                country = convToParam(results[result].address_components[component].long_name);
               };
             };
-          } else {
-            for (var result = 0; result < results.length; result++) {
-              for (var component = 0; component < results[result].address_components.length; component++) {
-                if(results[result].address_components[component].types.includes('locality')) {
-                  cityName = convToParam(results[result].address_components[component].long_name);
-                };
-              };
-            };
-            country = convToParam(results[results.length-1].address_components[0].long_name);
           };
-          countryCode = results[results.length-1].address_components[0].short_name;
+        } else {
+          for (var result = 0; result < results.length; result++) {
+            for (var component = 0; component < results[result].address_components.length; component++) {
+              if(results[result].address_components[component].types.includes('locality')) {
+                cityName = convToParam(results[result].address_components[component].long_name);
+              };
+            };
+          };
+          country = convToParam(results[results.length-1].address_components[0].long_name);
+        };
+        countryCode = results[results.length-1].address_components[0].short_name;
 
-          positionData.cityName = cityName;
-          positionData.country = country;
-          positionData.countryCode = countryCode;
-          positionData.latitude = latitude;
-          positionData.longitude = longitude;
-          resolve(positionData)
-        });
+        positionData.cityName = cityName;
+        positionData.country = country;
+        positionData.countryCode = countryCode;
+        positionData.latitude = latitude;
+        positionData.longitude = longitude;
+        resolve(positionData)
+      });
     });
   };
 
@@ -107,22 +105,18 @@ $(document).ready(function() {
   function getArtists(positionData, familiarity) {
     return new Promise(function(resolve, reject) {
       var familiarityTerm = familiarity || '0.5';
-  //    var genreTerm = genre || '*';
       var cityName = positionData.cityName;
       var country = positionData.country;
       var echonestUrl = 'https://developer.echonest.com/api/v4/artist/search?api_key=BG6IJZJJYOKNETBX8' +
                     '&format=json' +
                     '&artist_location=' + cityName + '+' + country +
                     '&max_familiarity=' + familiarityTerm +
-                    //'&description=' + genreTerm +
                     '&sort=familiarity-desc&results=35' +
                     '&bucket=id:spotify' +
                     '&bucket=biographies' +
                     '&bucket=artist_location' +
                     '&bucket=news';
-
       console.log('echonestURL ', echonestUrl)
-  // https://developer.echonest.com/api/v4/artist/search?api_key=BG6IJZJJYOKNETB…=classical&sort=familiarity-desc&results=35&bucket=id:spotify&bucket=genre
       $.get(echonestUrl, function(data){
         resolve(data);
       });
@@ -139,7 +133,6 @@ $(document).ready(function() {
         var spotifyId = spotifyArtistId(artist);
         var countryCode = positionData.countryCode;
         var topTracksUrl = "https://api.spotify.com/v1/artists/" + spotifyId + "/top-tracks?country=" + countryCode;
-
         $.get(topTracksUrl, function(response){
           if(response.tracks.length > 0) {
             var randomNum = Math.floor(Math.random() * response.tracks.length);
@@ -150,7 +143,6 @@ $(document).ready(function() {
             var poster = randomTrack.album.images[0].url;
             var bio = findBestBio(artist.biographies);
             var news = artist.news;
-
             myPlaylist.add({ title: title, artist: artistName, mp3: mp3, poster: poster, bio: bio, news: news });
             displayArtistInfoIfNotAlreadyDisplayed(artistName, title, poster, bio, news);
           };
@@ -187,7 +179,6 @@ $(document).ready(function() {
     var foreignId = artist.foreign_ids[0].foreign_id
     return foreignId.slice(15);
   }
-
 
   // CONVERTS MULTI WORD STRINGS INTO PARAMS e.g. 'Brighton and Hove' => 'Brighton+and+Hove'
   function convToParam(words) {
@@ -272,7 +263,6 @@ $(document).ready(function() {
     getSongKickMetroID(positionData).then(function(metroAreaIDPromise) {
       getUpcomingEvents(metroAreaIDPromise);
     });
-
   });
 
   function searchByLocation() {
@@ -307,15 +297,12 @@ $(document).ready(function() {
   function updateCurrentArtistFromPlaylist() {
     console.log("myPlaylist - see below");
     console.log(myPlaylist.playlist[0]);
-
     var artist = myPlaylist.playlist[0].artist;
     var title = myPlaylist.playlist[0].title;
     var poster = myPlaylist.playlist[0].poster;
     var bio = myPlaylist.playlist[0].bio;
     var news = myPlaylist.playlist[0].news;
     console.log(news);
-
     displayCurrentArtist(document, artist, title, poster, bio, news);
   }
-
 });
