@@ -8,7 +8,7 @@ var myPlaylist = new jPlayerPlaylist({
           stop: "#stop",
   }
 },
-[], //EMPTY PLAYLIST
+[],
 {
   playlistOptions: {
     enableRemoveControls: true
@@ -24,7 +24,7 @@ var myPlaylist = new jPlayerPlaylist({
   },
 
   autoplay: true,
-  audioFullScreen: true, // Allows the audio poster to go full screen via keyboard
+  audioFullScreen: true, 
   useStateClassSkin: true
 });
 
@@ -61,9 +61,6 @@ function displayCurrentArtist(document, artist, title, poster, bio, news) {
   document.getElementById("currentPoster").src = poster;
   document.getElementById("bio_full").innerHTML = bio.text;
 
-  //$("#playingArtistBiography").append("<a class=\"list-group-item\" href=\"#\""+
-  //        '<a data-toggle="modal" data-target="#myModal">' + bio.text.substring(0,500) +'... see more</a>');
-
   $("#playingArtistBiography").html("<a class=\"list-group-item\">");
   if (bio.text.length > 500) {
     $("#playingArtistBiography > .list-group-item").html(bio.text.substring(0,500) +
@@ -72,7 +69,6 @@ function displayCurrentArtist(document, artist, title, poster, bio, news) {
     $("#playingArtistBiography > .list-group-item").append(bio.text);
   };
 
-  // Clears previous articles before adding new
   $('#playingArtistNews').html("");
 
   if(news.length === 0) {
