@@ -44,7 +44,6 @@ function displayArtistInfoIfNotAlreadyDisplayed(artist, title, poster, bio, news
   }
 }
 
-// PICKS OUT THE ARTIST ID FROM THE URI
 function spotifyArtistId(artist) {
   var foreignId = artist.foreign_ids[0].foreign_id;
   return foreignId.slice(15);
